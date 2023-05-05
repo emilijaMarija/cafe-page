@@ -1,0 +1,29 @@
+.home {
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.home__paragraph {
+    padding: 0 4rem;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.home__menu-container {
+    margin: 10rem auto 0;
+    background-color: var(--tertiary-bg-container-color);
+    color: var(--tertiary-container-color);
+    border-radius: 25px;
+    padding: 1rem 4rem;
+    text-align: right;
+    position: relative;
+    max-width: 600px;
+}
+
+.home__cat-icon {
+    position: absolute;
+    height: 70%;
+    right: 70%;
+    bottom: 90%;
+}

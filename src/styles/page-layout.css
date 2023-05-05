@@ -1,0 +1,66 @@
+@import './colors.css';
+
+*:focus-visible {
+    outline: 2px solid var(--outline-color);
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+button {
+    background: var(--bg-color);
+    color: inherit;
+    border-style: none;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    transition: box-shadow 0.25s;
+}
+
+button:hover {
+    box-shadow: 4px 4px 8px currentColor;
+}
+
+.header {
+    background-color: var(--primary-bg-container-color);
+    display: flex;
+    justify-content: center;
+    gap: clamp(2rem, 15vw, 500px);
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+
+
+.header-logo {
+    width: 40vw;
+    max-width: 310px;
+}
+
+.header-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-link {
+    text-decoration: none;
+    color: var(--primary-container-color);
+    font-weight: 700;
+}
+
+.header-link:hover {
+    color: var(--primary-color);
+}

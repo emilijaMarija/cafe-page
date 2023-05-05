@@ -1,6 +1,5 @@
 function createMenu() {
   const menu = document.createElement('div')
-  menu.textContent = ''
   menu.className = 'menu'
 
   const mainHeading = document.createElement('h1')

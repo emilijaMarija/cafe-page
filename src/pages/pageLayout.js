@@ -2,6 +2,7 @@ import createHome from './home'
 import createMenu from './menu'
 import createAbout from './about'
 import Logo from '../assets/logo.png'
+import '../styles/page-layout.css'
 
 function createHeader() {
   const header = document.createElement('div');
@@ -10,9 +11,12 @@ function createHeader() {
   const logo = document.createElement('img')
   logo.src = Logo
   logo.alt = 'Basil and Jazz Cafe'
+  logo.className = 'header-logo'
 
   const nav = document.createElement('nav')
-  const list = document.createElement('ol')
+  const list = document.createElement('ul')
+  nav.className = 'header-nav'
+  list.className = 'header-list'
 
   list.appendChild(createLink("#", 'Home', 'Home'))
   list.appendChild(createLink("#", 'Menu', 'Menu'))
@@ -32,6 +36,7 @@ function createLink(href, text, page) {
   const link = document.createElement('a')
   link.href = href
   link.textContent = text
+  link.className = 'header-link'
   link.addEventListener("click", () => switchPage(page))
 
   listItem.appendChild(link)
@@ -49,7 +54,7 @@ function createPageLayout() {
   body.appendChild(page)
 }
 
-function switchPage(pageName) {
+export function switchPage(pageName) {
   const page = document.getElementById('page')
 
   while (page.firstChild) {

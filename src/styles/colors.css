@@ -1,0 +1,20 @@
+:root {
+    --primary-color: #8c5000;
+    --secondary-color: #735942;
+    --tertiary-color: #596339;
+    --error-color: #ba1a1a;
+
+    --bg-color: #ffffff;
+
+    --primary-container-color: #51443a;
+    --secondary-container-color: #291806;
+    --tertiary-container-color: #171e00;
+    --error-container-color: #410002;
+
+    --primary-bg-container-color: #f2dfd1;
+    --secondary-bg-container-color: #ffdcbf;
+    --tertiary-bg-container-color: #dde8b4;
+    --error-bg-container-color: #ffdad6;
+
+    --outline-color: #837469;
+}
