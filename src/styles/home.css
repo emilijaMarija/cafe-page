@@ -14,7 +14,7 @@
     margin: 10rem auto 0;
     background-color: var(--tertiary-bg-container-color);
     color: var(--tertiary-container-color);
-    border-radius: 25px;
+    border-radius: 1rem;
     padding: 1rem 4rem;
     text-align: right;
     position: relative;
@@ -32,7 +32,7 @@
     margin: 4rem auto;
     background-color: var(--secondary-bg-container-color);
     color: var(--secondary-container-color);
-    border-radius: 25px;
+    border-radius: 1rem;
     padding: 1rem 4rem;
     text-align: left;
     position: relative;
