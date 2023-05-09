@@ -63,7 +63,7 @@ function createHome() {
   mainHeading.className = 'home__heading'
 
   const paragraph = document.createElement('p')
-  paragraph.textContent = "At Basil & Jazz Cafe we are excited about food." +
+  paragraph.textContent = "At Basil & Jazz Cafe we are passionate about food." +
     " Not only do some of us completely lose it in its presence, we love sharing the joy " +
     "and love that comes with the culture of food. Join us over a warm chocolate chip cookie and " +
     "let's savour the moment together."
