@@ -27,3 +27,22 @@
     right: 70%;
     bottom: 90%;
 }
+
+.home__about-container {
+    margin: 4rem auto;
+    background-color: var(--secondary-bg-container-color);
+    color: var(--secondary-container-color);
+    border-radius: 25px;
+    padding: 1rem 4rem;
+    text-align: left;
+    position: relative;
+    max-width: 600px;
+}
+
+.home__dog-icon {
+    position: absolute;
+    height: 90%;
+    max-height: 213px;
+    right: 5%;
+    top: 110%;
+}
