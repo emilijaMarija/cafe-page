@@ -1,0 +1,38 @@
+.about {
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.about__pet-container {
+    background-color: var(--secondary-bg-container-color);
+    color: var(--secondary-container-color);
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.about__pet-container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.about__pet-image {
+    object-fit: cover;
+    width: 19rem;
+    aspect-ratio: 6 / 9;
+    border-radius: 1rem;
+}
+
+.about__pet-desc-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.about__pet-paragraph {
+    text-align: justify;
+}
