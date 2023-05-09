@@ -12,6 +12,12 @@ body {
     background-color: var(--bg-color);
 }
 
+#content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 h1 {
     font-size: 3rem;
 }
@@ -63,4 +69,12 @@ button:hover {
 
 .header-link:hover {
     color: var(--primary-color);
+}
+
+.footer {
+    margin-top: auto;
+    background-color: var(--primary-bg-container-color);
+    color: var(--primary-container-color);
+    text-align: center;
+    padding: 0.5rem;
 }

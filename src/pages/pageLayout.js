@@ -44,6 +44,14 @@ function createLink(href, text, page) {
   return listItem
 }
 
+function createFooter() {
+  const footer = document.createElement('div')
+  footer.className = 'footer'
+  footer.textContent = 'Made by Emilija Marija Zakardonskytė'
+
+  return footer
+}
+
 function createPageLayout() {
   const body = document.getElementById('content')
   const page = document.createElement('page')
@@ -52,6 +60,7 @@ function createPageLayout() {
 
   body.appendChild(createHeader())
   body.appendChild(page)
+  body.appendChild(createFooter())
 }
 
 export function switchPage(pageName) {
