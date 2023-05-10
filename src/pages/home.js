@@ -46,12 +46,11 @@ function createAboutSection() {
   dogIcon.alt = ''
   dogIcon.className = 'home__dog-icon'
 
-  aboutContainer.appendChild(dogIcon)
   aboutContainer.appendChild(aboutHeading)
   aboutContainer.appendChild(aboutText)
   aboutContainer.appendChild(aboutButton)
 
-  return aboutContainer
+  return [aboutContainer, dogIcon]
 }
 
 function createHome() {
@@ -72,7 +71,7 @@ function createHome() {
   home.appendChild(mainHeading)
   home.appendChild(paragraph)
   home.appendChild(createMenuSection())
-  home.appendChild(createAboutSection())
+  createAboutSection().forEach(x => home.appendChild(x))
 
   return home
 }
