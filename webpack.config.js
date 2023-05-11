@@ -24,6 +24,7 @@ module.exports = {
     port: '8080',
     static: {
       directory: path.resolve(__dirname, 'dist'),
-    }
+    },
+    historyApiFallback: true
   }
 };

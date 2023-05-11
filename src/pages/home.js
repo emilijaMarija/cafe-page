@@ -9,13 +9,19 @@ function createMenuSection() {
 
   const menuHeading = document.createElement('h2')
   const menuText = document.createElement('p')
-  const menuButton = document.createElement('button')
+  const menuLink = document.createElement('a')
   const catIcon = document.createElement('img')
 
   menuHeading.textContent = 'Check out our menu!'
   menuText.textContent = 'All options are completely homemade.'
-  menuButton.textContent = 'Take me there'
-  menuButton.addEventListener("click", () => switchPage('Menu'))
+  menuLink.textContent = 'Take me there'
+  menuLink.href = '/menu'
+  menuLink.addEventListener('click', (e) => {
+    switchPage('Menu')
+    history.pushState({}, '', '/menu')
+    e.preventDefault()
+  })
+  menuLink.className = 'home__link'
   catIcon.src = CatIcon
   catIcon.alt = ''
   catIcon.className = 'home__cat-icon'
@@ -23,7 +29,7 @@ function createMenuSection() {
   menuContainer.appendChild(catIcon)
   menuContainer.appendChild(menuHeading)
   menuContainer.appendChild(menuText)
-  menuContainer.appendChild(menuButton)
+  menuContainer.appendChild(menuLink)
 
   return menuContainer
 }
@@ -34,21 +40,27 @@ function createAboutSection() {
 
   const aboutHeading = document.createElement('h2')
   const aboutText = document.createElement('p')
-  const aboutButton = document.createElement('button')
+  const aboutLink = document.createElement('a')
   const dogIcon = document.createElement('img')
 
   aboutHeading.textContent = 'Learn more about Basil & Jazz'
   aboutText.textContent = "Even though basil is a delicious herb and jazz would make any cafe fancier, " +
     "that's not quite what we're talking about here..."
-  aboutButton.textContent = 'Read more'
-  aboutButton.addEventListener("click", () => switchPage('About'))
+  aboutLink.textContent = 'Read more'
+  aboutLink.href = '/about'
+  aboutLink.addEventListener('click', (e) => {
+    switchPage('About')
+    history.pushState({}, '', '/about')
+    e.preventDefault()
+  })
+  aboutLink.className = 'home__link'
   dogIcon.src = DogIcon
   dogIcon.alt = ''
   dogIcon.className = 'home__dog-icon'
 
   aboutContainer.appendChild(aboutHeading)
   aboutContainer.appendChild(aboutText)
-  aboutContainer.appendChild(aboutButton)
+  aboutContainer.appendChild(aboutLink)
 
   return [aboutContainer, dogIcon]
 }

@@ -18,9 +18,9 @@ function createHeader() {
   nav.className = 'header-nav'
   list.className = 'header-list'
 
-  list.appendChild(createLink("#", 'Home', 'Home'))
-  list.appendChild(createLink("#", 'Menu', 'Menu'))
-  list.appendChild(createLink("#", 'About Us', 'About'))
+  list.appendChild(createLink("/", 'Home', 'Home'))
+  list.appendChild(createLink("/menu", 'Menu', "Menu"))
+  list.appendChild(createLink("/about", 'About Us', 'About'))
 
   nav.appendChild(list)
 
@@ -36,8 +36,12 @@ function createLink(href, text, page) {
   const link = document.createElement('a')
   link.href = href
   link.textContent = text
+  link.addEventListener('click', (e) => {
+    switchPage(page)
+    history.pushState({}, '', href)
+    e.preventDefault()
+  })
   link.className = 'header-link'
-  link.addEventListener("click", () => switchPage(page))
 
   listItem.appendChild(link)
 
