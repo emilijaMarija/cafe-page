@@ -3,6 +3,7 @@ import createMenu from './menu'
 import createAbout from './about'
 import Logo from '../assets/logo.png'
 import '../styles/page-layout.css'
+import createNotFound from './notFound'
 
 function createHeader() {
   const header = document.createElement('div');
@@ -60,7 +61,6 @@ function createPageLayout() {
   const body = document.getElementById('content')
   const page = document.createElement('page')
   page.id = 'page'
-  page.appendChild(createHome())
 
   body.appendChild(createHeader())
   body.appendChild(page)
@@ -83,6 +83,9 @@ export function switchPage(pageName) {
       break
     case 'About':
       page.appendChild(createAbout())
+      break
+    case '404':
+      page.appendChild(createNotFound())
       break
     default:
       page.appendChild(createHome())

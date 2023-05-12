@@ -1,7 +1,7 @@
 import { switchPage } from '../pages/pageLayout'
 
 let routes = {}
-function route (path, template)  {return routes[path] = template}
+function route (path, template) {return routes[path] = template}
 
 route('/', () => {
   switchPage('Home')
@@ -13,19 +13,15 @@ route('/about', () => {
   switchPage('About')
 })
 
-function resolveRoute(route) {
-  try {
-    return routes[route]
-  } catch (e) {
-    throw new Error(`Route ${route} not found`)
-  }
-}
-
 function router() {
   let url = window.location.pathname || '/'
-  let route = resolveRoute(url)
+  let route = routes[url]
 
-  route();
+  if (route) {
+    route()
+  } else {
+    switchPage('404')
+  }
 }
 
 export default router
