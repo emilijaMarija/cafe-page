@@ -1,7 +1,3 @@
-.about {
-    text-align: center;
-}
-
 .about__pet-container {
     background-color: var(--secondary-bg-container-color);
     color: var(--secondary-container-color);

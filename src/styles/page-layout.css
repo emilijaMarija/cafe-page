@@ -10,6 +10,7 @@ body {
     font-weight: 400;
     color: var(--primary-color);
     background-color: var(--bg-color);
+    text-align: center;
 }
 
 #content {
@@ -20,6 +21,10 @@ body {
 
 h1 {
     font-size: 3rem;
+}
+
+a {
+    text-decoration: none;
 }
 
 button {
@@ -36,6 +41,11 @@ button {
 
 button:hover {
     box-shadow: 4px 4px 8px currentColor;
+}
+
+.hero-paragraph {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .header {
@@ -62,7 +72,6 @@ button:hover {
 }
 
 .header-link {
-    text-decoration: none;
     color: var(--primary-container-color);
     font-weight: 700;
 }

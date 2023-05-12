@@ -1,14 +1,3 @@
-.home {
-    text-align: center;
-}
-
-.home__paragraph {
-    padding: 0 4rem;
-    max-width: 600px;
-    height: auto;
-    margin: 0 auto;
-}
-
 h2, p {
     margin: 0;
 }
@@ -50,7 +39,6 @@ h2, p {
 }
 
 .home__link {
-    text-decoration: none;
     background: var(--bg-color);
     color: inherit;
     border-radius: 10px;

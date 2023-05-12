@@ -78,7 +78,7 @@ function createHome() {
     " Not only do some of us completely lose it in its presence, we love sharing the joy " +
     "and love that comes with the culture of food. Join us over a warm chocolate chip cookie and " +
     "let's savour the moment together."
-  paragraph.className = 'home__paragraph'
+  paragraph.className = 'hero-paragraph'
 
   home.appendChild(mainHeading)
   home.appendChild(paragraph)

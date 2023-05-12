@@ -49,7 +49,7 @@ function createMenu() {
   paragraph.textContent = "Everything on our menu is made from scratch with the highest quality ingredients. " +
     "Each dish is crafted with care and attention to detail. Just be prepared to share a bite or two – Jazz has been " +
     "known to give some serious puppy-dog eyes to those who don't!"
-  paragraph.className = 'menu__paragraph'
+  paragraph.className = 'hero-paragraph'
 
   menu.appendChild(mainHeading)
   menu.appendChild(paragraph)
