@@ -1,15 +1,20 @@
 import { switchPage } from '../pages/pageLayout'
 
 let routes = {}
+export const BASE_URI = '/cafe-page'
+
 function route (path, template) {return routes[path] = template}
 
-route('/', () => {
+route(BASE_URI + '/', () => {
   switchPage('Home')
 })
-route('/menu', () => {
+route(BASE_URI, () => {
+  switchPage('Home')
+})
+route(BASE_URI + '/menu', () => {
   switchPage('Menu')
 })
-route('/about', () => {
+route(BASE_URI + '/about', () => {
   switchPage('About')
 })
 

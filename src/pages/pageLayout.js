@@ -5,6 +5,7 @@ import Logo from '../assets/logo.png'
 import GithubMark from '../assets/github-mark.svg'
 import '../styles/page-layout.css'
 import createNotFound from './notFound'
+import { BASE_URI } from '../utils/router'
 
 function createHeader() {
   const header = document.createElement('div');
@@ -40,7 +41,7 @@ function createLink(href, text, page) {
   link.textContent = text
   link.addEventListener('click', (e) => {
     switchPage(page)
-    history.pushState({}, '', href)
+    history.pushState({}, '', BASE_URI + href)
     e.preventDefault()
   })
   link.className = 'header-link'

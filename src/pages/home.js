@@ -2,6 +2,7 @@ import '../styles/home.css'
 import { switchPage } from './pageLayout'
 import CatIcon from '../assets/cat-icon.png'
 import DogIcon from '../assets/dog-icon.png'
+import { BASE_URI } from '../utils/router'
 
 function createMenuSection() {
   const menuContainer = document.createElement('div')
@@ -18,7 +19,7 @@ function createMenuSection() {
   menuLink.href = '/menu'
   menuLink.addEventListener('click', (e) => {
     switchPage('Menu')
-    history.pushState({}, '', '/menu')
+    history.pushState({}, '', BASE_URI + '/menu')
     e.preventDefault()
   })
   menuLink.className = 'home__link'
@@ -50,7 +51,7 @@ function createAboutSection() {
   aboutLink.href = '/about'
   aboutLink.addEventListener('click', (e) => {
     switchPage('About')
-    history.pushState({}, '', '/about')
+    history.pushState({}, '', BASE_URI + '/about')
     e.preventDefault()
   })
   aboutLink.className = 'home__link'
