@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
+module.exports = (env) => ({
   mode: 'development',
   entry: './src/index.js',
   plugins: [
@@ -11,7 +11,7 @@ module.exports = {
     }),
   ],
   output: {
-    publicPath: '/',
+    publicPath: env.publicPath,
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
@@ -36,4 +36,4 @@ module.exports = {
     },
     historyApiFallback: true
   }
-};
+});

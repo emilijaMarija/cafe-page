@@ -4,7 +4,9 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy-gh-pages": "npx webpack --env publicPath=/cafe-page/",
+    "dev": "npx webpack serve --env publicPath=/"
   },
   "repository": {
     "type": "git",

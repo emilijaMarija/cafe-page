@@ -29,6 +29,6 @@ If you'd like to run this project on your own machine, you will need to:
 
 3. Run the project with 
 
-    `npx webpack serve`
+    `npm run dev`
 
 You can then open up a live demo on any device in your network with the port number 8080.
