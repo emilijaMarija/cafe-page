@@ -4,18 +4,16 @@ import Jazz from '../assets/jazz.jpg'
 
 function getAge(birthDate) {
   const formattedDate = new Date(birthDate)
-  const diff = Date.now() - formattedDate.getTime()
+  const diff = Date.now() - formattedDate
   const age = new Date(diff)
-  const formattedAge = Math.abs(age.getUTCFullYear() - 1970)
+  const ageInYears = Math.abs(age.getUTCFullYear() - 1970)
 
-  if (formattedAge === 0) {
-    return Math.abs(age.getMonth()) + ' month'
-  }
-
-  return Math.abs(age.getUTCFullYear() - 1970) + ' year'
+  return ageInYears === 0 ?
+    Math.abs(age.getMonth()) + ' month' :
+    ageInYears + ' year'
 }
 
-const basilAge = getAge("2020-2-14")
+const basilAge = getAge("2020-02-14")
 const basilDesc = `Meet Basil, our ${basilAge} old Scottish Fold. As a member of one of the friendliest cat breeds, ` +
   "Basil is no exception. He's a gentle soul who has never scratched anyone in his life, " +
   "but does prefer his alone time and will give Jazz, our puppy, a little hiss if he gets too close for comfort. " +
