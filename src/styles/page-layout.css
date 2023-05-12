@@ -87,4 +87,12 @@ button:hover {
     color: var(--primary-container-color);
     text-align: center;
     padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-link {
+    height: 1.5rem;
 }

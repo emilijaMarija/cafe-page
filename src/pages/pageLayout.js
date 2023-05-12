@@ -2,6 +2,7 @@ import createHome from './home'
 import createMenu from './menu'
 import createAbout from './about'
 import Logo from '../assets/logo.png'
+import GithubMark from '../assets/github-mark.svg'
 import '../styles/page-layout.css'
 import createNotFound from './notFound'
 
@@ -51,8 +52,19 @@ function createLink(href, text, page) {
 
 function createFooter() {
   const footer = document.createElement('div')
+  const githubLink = document.createElement('a')
+  const githubLogo = document.createElement('img')
+
   footer.className = 'footer'
   footer.textContent = 'Made by Emilija Marija Zakardonskytė'
+
+  githubLink.href = 'https://github.com/emilijaMarija/cafe-page'
+  githubLogo.src = GithubMark
+  githubLogo.alt = 'GitHub Profile'
+  githubLogo.className = 'footer-link'
+
+  githubLink.appendChild(githubLogo)
+  footer.appendChild(githubLink)
 
   return footer
 }
