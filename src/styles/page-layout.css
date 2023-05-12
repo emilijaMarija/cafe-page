@@ -15,7 +15,6 @@ body {
 
 #content {
     min-height: 100vh;
-    min-height: -webkit-fill-available;
     display: flex;
     flex-direction: column;
 }
@@ -95,4 +94,10 @@ button:hover {
 
 .footer-link {
     height: 1.5rem;
+}
+
+@supports (-webkit-touch-callout: none) {
+    #content {
+        min-height: -webkit-fill-available;
+    }
 }
